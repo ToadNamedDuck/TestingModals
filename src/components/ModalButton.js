@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function ModalButton(){
-    const [isActive, setIsActive] = useState(false)
+export default function ModalButton({isActive, setIsActive}){
     const [buttonText, setButtonText] = useState("Click Me!");
 
     function buttonOnClick(e){
@@ -18,5 +17,7 @@ export default function ModalButton(){
         }
     },[isActive])
 
-    return <button onClick={buttonOnClick}>{buttonText}</button>
+    return <>    
+        <button onClick={buttonOnClick}>{buttonText}</button>
+    </>
 }
